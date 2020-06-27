@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "libps1",
+    "binps1",
+]
