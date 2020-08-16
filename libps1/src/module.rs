@@ -32,13 +32,15 @@ impl Module {
 impl fmt::Display for Module {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         let content = (self.action)();
+        let start = 1 as char;
+        let end = 2 as char;
         match content {
             Some(c) => write!(
                 f,
-                "{l}{c}{r}",
+                "{l}{content}{r}",
                 l = " ".repeat(self.padding.0),
                 r = " ".repeat(self.padding.1),
-                c = self.style.paint(format!("{}", c))
+                content = self.style.paint(c),
             ),
             None => write!(f, ""),
         }

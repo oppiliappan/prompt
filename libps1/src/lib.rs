@@ -1,5 +1,3 @@
-#![feature(type_alias_impl_trait)]
-
 pub use ansi_term::{Color, Style};
 
 mod themes;
